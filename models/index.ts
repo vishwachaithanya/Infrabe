@@ -6,6 +6,8 @@ export const usersTable = mysqlTable("users", {
   email: varchar("email", { length: 255 }).notNull().unique(),
   password: text("password").notNull(),
   meterNumber: varchar("meter_number", { length: 50 }).unique(),
+  phone: varchar("phone", { length: 12 }),
+  address: text("address"),
 });
 
 export const alertsTable = mysqlTable("alerts", {
